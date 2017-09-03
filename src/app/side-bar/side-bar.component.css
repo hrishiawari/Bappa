@@ -25,7 +25,14 @@
     font-size: 19px;
  
 }
-
+#sidebar li:hover{
+    -webkit-text-fill-color:orangered;
+    cursor: pointer;
+    font-size: 20px;
+    
+    
+ 
+}
 .header{
      /* position: absolute; */
      text-align: center;
