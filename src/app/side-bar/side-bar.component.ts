@@ -13,7 +13,7 @@ export class SideBarComponent implements OnInit {
     this.em=new EventEmitter<String>();
   }
 User:String;
-
+SH:String;
   ngOnInit() {
   }
   toggleSidebar(){
@@ -22,6 +22,7 @@ User:String;
   }
   showcomp(){
     this.em.emit('show')
+    this.SH="SH";
   }
 
 }

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { SignInComponent } from './side-bar/sign-in.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +15,9 @@ import { SignInComponent } from './side-bar/sign-in.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+ 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

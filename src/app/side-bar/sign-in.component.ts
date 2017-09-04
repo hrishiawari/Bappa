@@ -1,5 +1,5 @@
 import { Component,Input,OnInit } from '@angular/core';
-
+import {SerForLoginService} from '../Services/ser-for-login.service';
 @Component({
   selector: 'app-sign-in',
   template: `
@@ -30,20 +30,21 @@ import { Component,Input,OnInit } from '@angular/core';
   ]
 })
 export class SignInComponent implements OnInit {
+  constructor(
+    // private firebaseService: SerForLoginService
+   ) {}
+
 @Input()
 GettingShow;
- constructor() { }
+
+
+
+
 
   ngOnInit() {
+    // this.LogService.logout();
   }
-
   onsigninFun(em:String,pass:String){
   // let body=JSON.stringify({em,pass})
-  if(em=="xy"){
-    console.log("ok");
-
   }
-  }
- 
- 
 }
