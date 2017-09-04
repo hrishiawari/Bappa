@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,EventEmitter,Output, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,17 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent implements OnInit {
-
+  @Output()
+  em:EventEmitter<String>
   constructor() { 
-    this.User="Hrishi"
+    this.User="Hrishi",
+    this.em=new EventEmitter<String>();
   }
 User:String;
 
   ngOnInit() {
   }
   toggleSidebar(){
-
+  
     document.getElementById("sidebar").classList.toggle('active');
+  }
+  showcomp(){
+    this.em.emit('show')
   }
 
 }

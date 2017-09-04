@@ -40,6 +40,7 @@
     background-color: orange;
     height: 70px;
     width: 100%;
+   
 
 }
 .btnn{
@@ -55,12 +56,15 @@
     left: 230px;
     top: 20px;
 }
+.signin{
+    margin:19px 19px;
+}
+
  /* #sidebar .toggle-btn span{
     display: block;
     width: 30px;
     height: 3px;
     background: #151719;
 }  */
-
 
 
