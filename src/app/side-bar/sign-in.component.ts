@@ -1,8 +1,9 @@
-import { Component,Input,OnInit } from '@angular/core';
-import {SerForLoginService} from '../Services/ser-for-login.service';
+import { Component,Input,OnInit,OnDestroy } from '@angular/core';
+import {LoginOutService} from '../AllServices/login-out.service';
 @Component({
   selector: 'app-sign-in',
   template: `
+  
    <div class="FormSignin" *ngIf="GettingShow">
       <input #em type="text" placeholder="example@example.com"  style="margin-top:140px; border:1px gray;
       border-radius:5px;text-indent: 10px;"/>
@@ -31,20 +32,27 @@ import {SerForLoginService} from '../Services/ser-for-login.service';
 })
 export class SignInComponent implements OnInit {
   constructor(
-    // private firebaseService: SerForLoginService
+  private LoginOutService: LoginOutService
    ) {}
 
 @Input()
-GettingShow;
+GettingShow :boolean;
 
 
 
 
 
   ngOnInit() {
+  
     // this.LogService.logout();
   }
-  onsigninFun(em:String,pass:String){
-  // let body=JSON.stringify({em,pass})
+  onsigninFun(em:string,pass:string){
+ 
+
+// this.GettingShow=false;
+this.LoginOutService.login(em,pass);
+this.GettingShow=this.LoginOutService.nm;
   }
+
+  
 }

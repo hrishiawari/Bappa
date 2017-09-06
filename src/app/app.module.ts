@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { SignInComponent } from './side-bar/sign-in.component';
+import{LoginOutService}from'./AllServices/login-out.service';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { SignInComponent } from './side-bar/sign-in.component';
     BrowserModule
   ],
   providers: [
+    LoginOutService
  
   ],
   bootstrap: [AppComponent]
